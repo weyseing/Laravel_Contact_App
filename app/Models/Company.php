@@ -11,4 +11,9 @@ class Company extends Model
 
     protected $guarded = [];
     protected $fillable = ['name', 'address', 'email', 'website'];
+
+    // one to many DB relationship
+    public function contacts() {
+        return $this->hasMany(Contact::class);
+    }
 }
