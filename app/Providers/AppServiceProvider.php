@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // -----------------------------
+        // add this to set Laravel to Bootstrap CSS from Default Tailwind CSS
+        // -----------------------------
+        \Illuminate\Pagination\Paginator::useBootstrap();
     }
 }

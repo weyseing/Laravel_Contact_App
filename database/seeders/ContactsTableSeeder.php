@@ -1,5 +1,4 @@
 <?php
-
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -8,18 +7,17 @@ use Illuminate\Database\Seeder;
 // ===============================
 // MUST import model
 // ===============================
-use App\Models\Company;                     //Company model
 use App\Models\Contact;                    //contact model
 
-class DatabaseSeeder extends Seeder
+class ContactsTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        Company::factory()->hasContacts(5)->count(10)->create();                     
+        Contact::factory()->count(50)->create();                 //created Factory fake model instance and save MULTIPLE faker data to DB
     }
 }

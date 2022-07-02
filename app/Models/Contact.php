@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
+    protected $fillable = ['first_name', 'last_name', 'email', 'phone', 'address'];
 
     // one to many DB relationship
     public function company() {
