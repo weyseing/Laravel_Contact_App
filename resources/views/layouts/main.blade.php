@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- ============================ -->
+    <!-- CSRF token -->
+    <!-- ============================ -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- ============================ -->
     <!-- title -->
     <!-- ============================ -->
     <title>@yield('title', 'Contact App')</title>
@@ -55,5 +60,6 @@
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
   </body>
 </html>

@@ -3,11 +3,17 @@
   <div class="col-md-6">
     <div class="row">
       <div class="col">
-        <select class="custom-select">
-          <option value="" selected>All Companies</option>
-          <option value="1">Company One</option>
-          <option value="2">Company Two</option>
-          <option value="3">Company Three</option>
+        <select id="filter_company_id" name="company_id" class="custom-select">
+
+          <!-- ========================================== -->
+          <!-- display all companies into dropdown list -->
+          <!-- ========================================== -->
+          @if ($companies->count())
+            @foreach ($companies as $id => $name)
+              <option {{ $id == request('company_id') ? 'selected' : '' }} value="{{ $id }}">{{ $name }}</option>           <!-- check  company_id in url parameter & select in downdown list -->
+            @endforeach
+          @endif
+
         </select>
       </div>
       <div class="col">
